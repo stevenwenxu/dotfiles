@@ -1,0 +1,25 @@
+[user]
+	name = Steven Xu
+	email = steven.xu@shopify.com
+[push]
+	default = simple
+[alias]
+    l  = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ad) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative --remotes --branches
+    lb = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ad) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+    up = remote update -p
+    ff = merge --ff-only
+    st = status
+    co = checkout
+    cp = cherry-pick
+    amm = commit --amend
+	ignore = "!gi() { curl -L -s https://www.gitignore.io/api/$@ ;}; gi"
+[diff]
+	algorithm = patience
+[gc]
+	writeCommitGraph = true
+[protocol]
+	version = 2
+[pull]
+	rebase = true
+[core]
+	commitGraph = true
