@@ -6,6 +6,10 @@ logs() {
   journalctl -fu proc-shopify--shopify@server.service
 }
 
+stop() {
+  systemctl stop proc-shopify--shopify@server.service
+}
+
 restart() {
   systemctl restart proc-shopify--shopify@server.service
 }
