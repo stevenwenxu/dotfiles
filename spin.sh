@@ -14,6 +14,14 @@ restart() {
   systemctl restart proc-shopify--shopify@server.service
 }
 
+server() {
+  /opt/spin/bin/procfile-exec server
+}
+
+worker() {
+  /opt/spin/bin/procfile-exec worker
+}
+
 update_bundle() {
   bundle config --global PKGS__SHOPIFY__IO "token:$(gsutil cat gs://dev-tokens/cloudsmith/shopify/gems/latest)"
 }
