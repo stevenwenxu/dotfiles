@@ -25,3 +25,5 @@ worker() {
 update_bundle() {
   bundle config --global PKGS__SHOPIFY__IO "token:$(gsutil cat gs://dev-tokens/cloudsmith/shopify/gems/latest)"
 }
+
+export BUILDKITE_TOKEN="$(cat /etc/spin/secrets/buildkite)"
